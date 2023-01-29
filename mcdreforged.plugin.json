@@ -1,0 +1,11 @@
+{
+    "id": "chat_draw",
+    "version": "0.1.0",
+    "name": "Minecraft chat draw",
+    "description": "在聊天栏画图",
+    "author": "Harry",
+    "link": "https://github.com/MCDReforged",
+    "dependencies": {
+        "mcdreforged": ">=2.7"
+    }
+}

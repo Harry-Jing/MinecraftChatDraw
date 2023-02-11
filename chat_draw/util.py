@@ -43,7 +43,7 @@ def url2cmd(src: CommandSource, ctx: dict):
 
 
 def show_saved(src: CommandSource, ctx: dict):
-    for root,dirs,files in os.walk('config/img_draw/data'):
+    for root,dirs,files in os.walk('config/chat_draw/data'):
         for file in files:
             src.reply(file.rstrip('.png'))
         
@@ -52,7 +52,7 @@ def show_saved(src: CommandSource, ctx: dict):
 
 def file2cmd(src: CommandSource, ctx: dict):
     server = src.get_server()
-    file = f'config/img_draw/data/{ctx["file_name"]}.png'
+    file = f'config/chat_draw/data/{ctx["file_name"]}.png'
     try:
         cmd_list = img2cmd(file)
     except FileNotFoundError as exc:
@@ -65,7 +65,7 @@ def file2cmd(src: CommandSource, ctx: dict):
 def save_image(img: bytes, file_name: str):
     img_data = Image.open(img)
     img_data.convert('RGB')
-    img_data.save(f'config/img_draw/data/{file_name}.png')
+    img_data.save(f'config/chat_draw/data/{file_name}.png')
 
 
 def help_message(src: CommandSource, ctx: dict):
